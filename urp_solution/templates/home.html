@@ -1,0 +1,61 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <title>ZiJin URP</title>
+    <link rel="icon" href="https://img.icons8.com/?size=100&id=XhIm44CcXKqm&format=png&color=000000">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords"
+        content="Hotair Login Form Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" type="text/css" media="all">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+</head>
+<body>
+    <section class="w3l-hotair-form">
+        <div class="container">
+            <div class="workinghny-form-grid">
+                <div class="main-hotair">
+                    <div class="content-wthree">
+                        <h2>Log In</h2>
+                        <p>To Your Account</p>
+                        <form action="/grades/" method="post">
+                            <input type="text" class="text" name="username" placeholder="User Name" required="", value="{{username}}">
+                            <input type="password" class="password" name="password" placeholder="User Password" required="", value="{{password}}",>
+                            <button class="btn" type="submit">Log In</button>
+                        </form>
+                        <button class="getAllowance btn btn-warning" type="button" onclick="checkAdmission()" data-bs-toggle="tooltip" data-bs-placement="right" title="Enter Your ID and Key.">
+                            Get Admission</button>
+                        <div id="alert-container" style="position: fixed; top: 20%; left: 50%; transform: translateX(-50%); z-index: 9999;"></div>
+                        <p id="GetTime"></p>
+                    </div>
+                    <div class="w3l_form align-self">
+                        <div class="left_grid_info">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const tm = document.getElementById('GetTime');
+        tm.innerHTML = new Date().toLocaleString();
+        window.onload = function () {
+        setInterval(() => {
+            tm.innerHTML = new Date().toLocaleString();
+        }, 1000);
+        }
+    </script>
+    <script src="{% static 'js/load_credits.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        tooltipTriggerList.forEach(tooltip => {
+            new bootstrap.Tooltip(tooltip)
+        })
+    </script>
+</body>
+</html>

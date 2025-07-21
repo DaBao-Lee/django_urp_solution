@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>error</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="https://img.icons8.com/?size=100&id=63688&format=png&color=000000">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .error-container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .error-code {
+            font-size: 6rem;
+            font-weight: bold;
+            color: #dc3545;
+        }
+        .error-message {
+            font-size: 1.5rem;
+            color: #343a40;
+            margin-bottom: 1rem;
+        }
+        .return-btn {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container text-center">
+        <div class="error-code">⚠️ 发生错误</div>
+        <div class="error-message">很抱歉，系统遇到了一个异常，请稍后再试。</div>
+        <div class="text-muted">请检查您的账号和密码输入是否正确？如果正确，错误可能由网络、数据格式或服务器问题引起。</div>
+        <a href="/" class="btn btn-danger return-btn">返回首页</a>
+    </div>
+</body>
+</html>
