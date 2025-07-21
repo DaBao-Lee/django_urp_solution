@@ -70,7 +70,6 @@ def show_grade(request):
         response, session = get_session(username, password)
         if '学分制综合教务' in response.text:
             name, result = get_grades(session)
-            count = len(result['courseName'])
             users[f'{time.time()}'] = {"name": f"已授权用户 ==> {name}", 'username': username, 'password': password,
                                        "time": time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()),
                                        "status": "success"}
